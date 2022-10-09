@@ -7,6 +7,37 @@
     <title>Document</title>
 </head>
 <body>
-    <p>hi ghyj</p>
+   
+<p id="target">Your Time</p>
+<p id="countdown">Count</p>
+<br>
+<button type="button" class="btn btn-primary"onclick="startTime()">Start Timer</button>
+<button type="button" class="btn btn-primary"onclick="recordReact()">React Now</button>
+<script>
+    let myTime=undefined
+    var  buttonTime
+    function recordReact(){
+        myTime=Date.now()
+        console.log(myTime)
+    }
+     function startTime(){
+          for(i=0;i<=3;i++){
+            setTimeout(()=>{
+                document.getElementById("countdown").innerHTML=i
+            },(3-i)*1000)
+          }
+          if(myTime==undefined)
+         {
+    document.getElementById("target").innerHTML="Too Slow"
+
+          }   
+          else{
+            buttonTime=Date.now()
+            difference=buttonTime-myTime
+            document.getElementById("target").innerHTML="Time was "+difference
+          } }
+</script>
 </body>
+</html>
+    
 </html>

@@ -26,6 +26,7 @@
                 document.getElementById("countdown").innerHTML=i
             },(3-i)*1000)
           }
+          setTimeout(()=>{
           if(myTime==undefined)
          {
     document.getElementById("target").innerHTML="Too Slow"
@@ -35,7 +36,9 @@
             buttonTime=Date.now()
             difference=buttonTime-myTime
             document.getElementById("target").innerHTML="Time was "+difference
-          } }
+          } 
+        })
+    }
 </script>
 </body>
 </html>
